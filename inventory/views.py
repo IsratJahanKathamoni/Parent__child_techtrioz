@@ -1,0 +1,14 @@
+from django.shortcuts import render
+
+from rest_framework import viewsets
+
+from .models import *
+from .serializers import *
+
+
+# Create your views here.
+
+class inventory_all_view(viewsets.ModelViewSet):
+    queryset = Inventory.objects.all()
+    serializer_class = inventorySerializer
+    
